@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: #0c0a09;
+  color: #f5f0e8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .section-divider {
+    @apply border-t border-gold/15;
+  }
+
+  .gold-gradient-text {
+    @apply bg-gradient-to-r from-gold-pale via-gold to-gold-light bg-clip-text text-transparent;
+  }
+}
