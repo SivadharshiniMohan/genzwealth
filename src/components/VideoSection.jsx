@@ -7,6 +7,9 @@ export default function VideoSection() {
   const videoSrc = siteConfig.videoSrc
     ? `${import.meta.env.BASE_URL}${siteConfig.videoSrc}`
     : ''
+  const videoPoster = siteConfig.videoPoster
+    ? `${import.meta.env.BASE_URL}${siteConfig.videoPoster}`
+    : undefined
   const hasVideo = Boolean(siteConfig.videoSrc)
 
   return (
@@ -28,6 +31,7 @@ export default function VideoSection() {
           <video
             className="h-full w-full object-cover"
             src={videoSrc}
+            poster={videoPoster}
             controls
             playsInline
             preload="metadata"
@@ -35,7 +39,15 @@ export default function VideoSection() {
             Your browser does not support the video tag.
           </video>
         ) : (
-          <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-b from-ink-elevated to-ink px-4">
+          <div className="relative h-full w-full">
+            {videoPoster ? (
+              <img
+                src={videoPoster}
+                alt="Watch before you apply"
+                className="h-full w-full object-cover"
+              />
+            ) : null}
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/40 px-4">
             <div
               className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-ink-card shadow-gold-sm sm:h-16 sm:w-16"
             >
@@ -45,6 +57,7 @@ export default function VideoSection() {
             <p className="text-center text-[10px] text-cream/30 sm:text-xs">
               Add your video path in <code className="text-gold/70">src/config.js</code>
             </p>
+            </div>
           </div>
         )}
       </div>
