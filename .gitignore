@@ -12,3 +12,6 @@ dist/
 .DS_Store
 *.log
 .vscode/
+
+# Large original video (compressed copy is in public/vd/)
+public/images/vd/

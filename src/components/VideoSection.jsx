@@ -4,6 +4,9 @@ import ApplyButton from './ApplyButton'
 import NewsBanner from './NewsBanner'
 
 export default function VideoSection() {
+  const videoSrc = siteConfig.videoSrc
+    ? `${import.meta.env.BASE_URL}${siteConfig.videoSrc}`
+    : ''
   const hasVideo = Boolean(siteConfig.videoSrc)
 
   return (
@@ -24,7 +27,7 @@ export default function VideoSection() {
         {hasVideo ? (
           <video
             className="h-full w-full object-cover"
-            src={siteConfig.videoSrc}
+            src={videoSrc}
             controls
             playsInline
             preload="metadata"

@@ -1,10 +1,10 @@
 /**
- * Site configuration — update these when you're ready.
+ * Site configuration
  *
- * videoSrc: path to your video file (e.g. '/videos/intro.mp4') or a full URL
+ * videoSrc: path relative to public/ (e.g. 'vd/kalanithi-intro.mp4')
  * ctaLink:  URL the CTA button opens when clicked
  */
 export const siteConfig = {
-  videoSrc: '',
+  videoSrc: 'vd/kalanithi-intro.mp4',
   ctaLink: 'https://calendly.com/genzwealth/one-on-one-consultation',
 }
