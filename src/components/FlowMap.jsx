@@ -4,7 +4,7 @@ const steps = [
   'Watch the above video',
   'Apply for the free discovery session',
   'Speak with our team to understand the complete membership',
-  "If it's the right fit for your goals, join Kalanithi Wealth Circle",
+  "If it's the right fit for your goals, join Genz Wealth Circle",
 ]
 
 export default function FlowMap() {
