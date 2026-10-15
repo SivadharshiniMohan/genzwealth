@@ -8,5 +8,5 @@
 export const siteConfig = {
   videoSrc: 'vd/kalanithi-intro.mp4',
   videoPoster: 'IMG_4427.PNG',
-  ctaLink: 'https://calendly.com/genzwealth/one-on-one-consultation',
+  ctaLink: 'https://forms.gle/yTAUtXL1S3Q1PCN66',
 }
